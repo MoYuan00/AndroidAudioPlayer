@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingRight="5dp"
+    tools:context=".MusicListActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayoutPlayAll"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp">
+
+        <TextView
+            android:id="@+id/textViewPlayAll"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="播放全部" />
+
+        <ImageView
+            android:id="@+id/imageViewPlayAll"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:srcCompat="@mipmap/list_play_all" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/relativeLayoutEndItem"
+        android:layout_below="@id/linearLayoutPlayAll"
+        android:orientation="horizontal">
+
+        <ListView
+            android:id="@+id/listViewMucisList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutEndItem"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#E9DBDBDB"
+        android:padding="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <ImageView
+            android:id="@+id/imageViewSelected"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            tools:srcCompat="@tools:sample/avatars[0]" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/frameLayoutPlay"
+            android:layout_toRightOf="@id/imageViewSelected"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewSelectedTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="title"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/textViewSelectedArist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="artist"
+                android:textSize="10dp" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayoutPlay"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="3dp">
+
+            <ImageView
+                android:id="@+id/imageViewPlaying"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:scaleX="0.6"
+                android:scaleY="0.6"
+                app:srcCompat="@mipmap/list_play_s" />
+        </FrameLayout>
+
+    </RelativeLayout>
+</RelativeLayout>
